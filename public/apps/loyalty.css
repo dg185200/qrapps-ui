@@ -1,0 +1,22 @@
+.input {
+    margin: 10px 0;
+}
+
+#loyalty label.placeLabel {
+    font-weight: 700;
+}
+
+#loyalty input {
+    background-color: #fdf7d8;
+    border: 1px solid #ccc;
+    box-shadow: none;
+    font-size: 16px;
+    padding: 10px 10px;
+    width: 90%;
+}
+
+#loyalty .optional {
+    font-weight: 700;
+    margin: 40px 0;
+    text-align: center;
+}
