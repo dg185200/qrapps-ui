@@ -47,37 +47,6 @@ function init() {
         var html = template(slot);    
         mainSection.append(htmlToElement(html));
     });
-
-    document.getElementById('checkout').onclick = function(e) {
-        appStoreSection.classList.add('hidden');
-        bannerSection.classList.add('hidden');
-        mainSection.classList.add('hidden');
-        checkoutButton.classList.add('hidden');
-
-        var coupons = [];
-        const selectedCoupons = document.getElementsByClassName("coupon selected");
-        for (var i = 0; i < selectedCoupons.length; i++) {
-            coupons.push(selectedCoupons[i].id);
-        }
-
-        new QRCode(document.getElementById("qrcode"), JSON.stringify(coupons));
-
-        codeSection.classList.remove('hidden');
-    }
-
-    const clipButtons = document.getElementsByClassName('clip-button');
-    for (var i = 0; i < clipButtons.length; i++) {
-        clipButtons[i].onclick = function(e) {
-            const couponId = e.currentTarget.id;
-            document.getElementById("coupon-" + couponId).classList.toggle('selected');
-            
-            if (document.getElementsByClassName("coupon selected").length > 0) {
-                document.getElementById("checkout").disabled = false;
-            } else {
-                document.getElementById("checkout").disabled = true;
-            }
-        };
-    }
 }
 
 function htmlToElement(html) {

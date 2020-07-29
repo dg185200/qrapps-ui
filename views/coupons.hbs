@@ -50,15 +50,15 @@
     </footer>
 
     <script id="coupon-template" type="text/x-handlebars-template">
-        <div class="coupon" id="coupon-{{id}}">
-            <div class="icon"><img width="120px" src="{{icon}}"/></div>        
-            <h4>{{title}}</h4>
+        <div class="coupon" id="coupon-\{{id}}">
+            <div class="icon"><img width="120px" src="\{{icon}}"/></div>        
+            <h4>\{{title}}</h4>
             <div class="body">
-                {{description}}            
+                \{{description}}            
             </div>
-            <div class="expiration">Expires on: {{expiration}}</div>          
+            <div class="expiration">Expires on: \{{expiration}}</div>          
             <div class="clip">         
-                <button id="{{id}}" class="clip-button">Clip</button>
+                <button id="\{{id}}" class="clip-button">Clip</button>
             </div>
         </div>
       </script>
