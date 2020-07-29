@@ -7,10 +7,40 @@
     <title>NCR QR App</title>
     <link rel="shortcut icon" href="/images/favicon.ico"/>
     <link rel="manifest" href="/manifest.webmanifest">
-    <link rel="stylesheet" type="text/css" href="./qrapps.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="./qrapps.js"></script>
+    <link rel="stylesheet" type="text/css" href="/apps/{{appResource}}.css">
+    <link rel="stylesheet" type="text/css" href="/apps/qrapps.css">
+    <link rel="stylesheet" type="text/css" href="/apps/appointment.css">
+    <script src="/apps/{{appResource}}.js"></script>
     <script src="/scripts/qrcode.js"></script>
     <script src="/scripts/handlebars.min-v4.7.6.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+        header #app-toolbar {
+            background-color: {{brandColor1}};
+        }
+    </style>
 </head>
+<body>
+    <header>
+        <div id="app-toolbar" class="row">
+            <div id="icon" class="column">
+                <img width="120px" src="{{brandLogo}}"/>
+            </div>
+            <div id="location" class="column">
+                 {{brandSite}}
+            </div>
+         </div>
+        
+         <div id="app-name">
+            <h1>{{appName}}</h1>
+        </div>  
+        
+        <div id="app-store">
+            <img src="{{brandImage}}">
+        </div>  
+
+        <div id="banner">{{banner}}</div>
+    </header>
+
+{{{body}}}    

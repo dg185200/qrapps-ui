@@ -12,6 +12,7 @@
     "express": "^4.17.1",
     "express-handlebars": "^3.0.0",
     "express-hbs": "^1.0.3",
-    "expressjs": "^1.0.1"
+    "expressjs": "^1.0.1",
+    "node-fetch": "^2.6.0"
   }
 }
