@@ -1,42 +1,79 @@
-    <main id="menu">
-        <section id="payment" style="display: none;">
+    <main id="order">
+        <section id="menu"></section>
+
+        <section id="payment" class="hidden">
             <h2>Payment</h2>
-            <div>
-                <input type="checkbox" id="scales" name="scales"
-                    checked>
+            <div class="input">
+                <input class="printedReceipt" type="radio" id="radio-group-0" name="radio-group">
+                <label for="scales">Cash</label>
+            </div>
+            <div class="input">
+                <input class="printedReceipt" type="radio" id="radio-group-0" name="radio-group">
                 <label for="scales">Credit Card</label>
-            </div>            
+            </div>
+            <div class="input">
+                <input class="printedReceipt" type="radio" id="radio-group-0" name="radio-group">
+                <label for="scales">Apple Pay</label>
+            </div>
+            <div class="input">
+                <input class="printedReceipt" type="radio" id="radio-group-0" name="radio-group">
+                <label for="scales">Google Pay</label>
+            </div>
         </section>
 
-        <section id="receipt" style="display: none;">
+        <section id="receipt" class="hidden">
             <h2>Receipt</h2>
-            <div>
-                <input type="checkbox" id="scales" name="scales"
-                    checked>
+            <div class="input">
+                <input class="printedReceipt" type="radio" id="radio-group-0" name="radio-group">
                 <label for="scales">Printed Receipt</label>
-        
-                <div>
-                    <input type="checkbox" id="scales" name="scales"
-                    checked>
-                    <label for="scales">Digital Receipt</label>
-                </div>
             </div>
-        
-            <div>
-                <label>Email address</label>
-                <input type="text">   
+
+            <div class="input">
+                <input class="digitalReceipt" type="radio" id="radio-group-0" name="radio-group">
+                <label for="scales">Digital Receipt</label>
             </div>
-        
-            <div>
-                <label>Phone number</label>
-                <input type="text">   
-            </div>
-            </section>    
+        </section>    
+
+        <section id="notification" class="hidden">
+            <h2>Notification</h2>
+            <div class="input">
+                <label for="email_field" class="placeLabel">Email</label>
+                <input name="email" id="email_field" type="email" tabindex="0" autocomplete="email" maxlength="50" minlength="5" dir="ltr">
+            </label>
+
+            <div class="input align-center">or</div>
+
+            <div class="input">
+                <label for="phone_field" class="placeLabel">Phone</label>
+                <input name="phone" id="phone_field" type=number pattern="[0-9]*" tabindex="1" autocomplete="email" maxlength="50" minlength="5" dir="ltr">
+            </label>
+        </section>
+
     </main>
 
-    <div id="qrcode"></div>
+    <div id="code" class="hidden">
+        <div id="qrcode"></div>
+        <div class="input">Scan this QR Code at the point of sale</div>
+    </div>
 
     <footer>
-        <button id="checkout">Checkout</button>       
+        <button id="btn-payment">Payment</button>       
+        <button id="btn-checkout" class="hidden">Checkout</button>
+        <div id="alternative" class="hidden">
+            <div class="input align-center">or</div>
+            <button id="online">Order Online</button>       
+        </div>  
     </footer>
+
+    <script id="menu-template" type="text/x-handlebars-template">
+            <h3>\{{category}}</h3>
+    </script>
+
+    <script id="menu-item-template" type="text/x-handlebars-template">
+            <h3>\{{name}}</h3>
+    </script>
+
+    <script>
+        const menu = JSON.parse('{{{menu}}}');
+    </script>
 </body>

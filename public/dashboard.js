@@ -38,6 +38,7 @@ function renderResults(metrics) {
 }
 
 function renderQRCodes() {
-    new QRCode(document.getElementById("qrCode-menu"), "https://ncr.com");
-    new QRCode(document.getElementById("qrCode-order"), "https://ncr.com");
+    new QRCode(document.getElementById("qrCode-order"), "http://35.232.208.35/apps/order/red-robin-qa/7ec5fed5d44f4c91a1c885f3968b755c");
+    new QRCode(document.getElementById("qrCode-coupon"), "http://35.232.208.35/apps/coupons/red-robin-qa");
+    new QRCode(document.getElementById("qrCode-loyalty"), "http://35.232.208.35/apps/loyalty/red-robin-qa");
 }

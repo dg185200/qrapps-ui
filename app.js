@@ -1,3 +1,4 @@
+const bodyParser = require('body-parser');
 const express = require('express');
 const hbs = require('express-hbs');
 const path = require('path');
@@ -7,6 +8,9 @@ const adminRoutes = require('./routes/admin');
 
 const app = express()
 const port = 3000
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
 
 app.use('/', adminRoutes);
 app.use('/apps', appsRoutes);

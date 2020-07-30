@@ -31,10 +31,9 @@ window.addEventListener("load", function() {
 
 function init() {    
 
-    const appStoreSection = document.getElementById("app-store");
-    const bannerSection = document.getElementById("banner");
+    var selectedAppt = { id: ""};
+
     const mainSection = document.getElementById("slots");
-    const checkoutButton = document.getElementById("checkout");
     const codeSection = document.getElementById("code");
 
     var source = document.getElementById("slot-template").innerHTML;
@@ -47,6 +46,29 @@ function init() {
         var html = template(slot);    
         mainSection.append(htmlToElement(html));
     });
+
+    const slotButtons = document.getElementsByClassName('slot');
+    for (var i = 0; i < slotButtons.length; i++) {
+        slotButtons[i].onclick = function(e) {
+            const slotId = e.currentTarget.id;
+            selectedAppt = slotId;
+            
+            document.getElementById("btn-" + slotId).classList.toggle('selected');
+            
+            if (document.getElementsByClassName("selected").length > 0) {
+                document.getElementById("btn-book").disabled = false;
+            } else {
+                document.getElementById("btn-book").disabled = true;
+            }
+       };
+    }
+
+    document.getElementById('btn-book').onclick = function(e) {
+        var appointment = selectedAppt;
+        mainSection.classList.add('hidden');
+        codeSection.classList.remove('hidden');
+        new QRCode(document.getElementById("qrcode"), JSON.stringify(appointment));
+    };
 }
 
 function htmlToElement(html) {
