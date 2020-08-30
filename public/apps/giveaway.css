@@ -1,0 +1,43 @@
+#promotions label.placeLabel {
+    font-weight: 700;
+}
+
+#promotions-info input {
+    background-color: #fdf7d8;
+    border: 1px solid #ccc;
+    box-shadow: none;
+    font-size: 16px;
+    padding: 10px 10px;
+    width: 90%;
+}
+
+#promotions .optional {
+    font-weight: 700;
+    margin: 40px 0;
+    text-align: center;
+}
+
+#promotions-reward {
+    margin: 70px 0;
+    text-align: center;
+}
+
+#promotions-reward h3 {
+    border: 0;
+    font-size: 1.5em;
+}
+
+#promotions-reward input {
+    width: auto;
+}
+
+#promotions-reward .input{
+    background: lightyellow;
+    padding: 20px 0;
+    border: 1px solid #ffee66;
+    font-size: 0.9em;
+}
+
+#promotions-reward label {
+    display: initial;
+}

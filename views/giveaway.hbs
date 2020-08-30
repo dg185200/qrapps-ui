@@ -1,0 +1,35 @@
+    <main>
+        <div id="promotions-info">
+            <h4>Enter your contact information and see if you are our lucky winner today</h4>
+
+            <div class="input">
+                <label for="email_field" class="placeLabel">Email</label>
+                <input name="email" id="email_field" type="email" tabindex="0" autocomplete="email" maxlength="50" minlength="5" dir="ltr">
+            </div>
+
+            <div class="input align-center">or</div>
+
+            <div class="input">
+                <label for="phone_field" class="placeLabel">Phone</label>
+                <input name="phone" id="phone_field" type=number pattern="[0-9]*" tabindex="1" autocomplete="email" maxlength="50" minlength="5" dir="ltr">
+            </div>
+        </div>
+
+        <div id="promotions-reward" class="hidden">
+                <h2>CONGRATULATIONS</h2>
+                <img width="100%" src="/images/dessert.jpeg">
+                <h3>You've won a free dessert!</h4>
+                <div class="input">
+                    <input checked name="rewardCheckbox" id="email_field" type="checkbox">
+                    <label for="email_field" class="rewardLabel">Join our loyalty program and earn points with every purchase.</label>
+                </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <button id="promotions-check">Try your luck</button>     
+        <button id="promotions-claim" class="hidden">Claim my reward</button>       
+    </footer>
+
+</body>
