@@ -16,8 +16,23 @@
     <script src="/scripts/handlebars.min-v4.7.6.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <style>
+        button {
+            background-color: {{brandButtonColor}};
+        }
+
         header #app-toolbar {
+            color: {{brandFontColor1}};
             background-color: {{brandColor1}};
+        }
+
+        header #app-name {
+            color: {{brandFontColor2}};
+            background-color: {{brandColor2}};
+         }
+
+        header #banner {
+            color: {{brandFontColor3}};
+            background: {{brandColor3}};
         }
     </style>
 </head>
@@ -25,7 +40,7 @@
     <header>
         <div id="app-toolbar" class="row">
             <div id="icon" class="column">
-                <img width="120px" src="{{brandLogo}}"/>
+                <img height="36px" src="{{brandLogo}}"/>
             </div>
             <div id="location" class="column">
                  {{brandSite}}
